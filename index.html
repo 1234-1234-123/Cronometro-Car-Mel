@@ -1,42 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Cronómetro Pro</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Cronómetro Pro - Análisis de Sistemas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="container">
+        <h1>Cronómetro de Competición</h1>
+        <div id="display">00:00:00.00</div>
+        
+        <div class="controls">
+            <button id="startBtn">Iniciar</button>
+            <button id="captureBtn" disabled>Capturar Competidor</button>
+            <button id="resetBtn">Reiniciar</button>
+        </div>
 
-<div class="container">
-
-<h1>Cronómetro de Competición</h1>
-
-<div id="display">00:00:00.00</div>
-
-<div class="controls">
-<button id="startBtn">Iniciar</button>
-<button id="captureBtn" disabled>Capturar Competidor</button>
-<button id="resetBtn">Reiniciar</button>
-</div>
-
-<table id="resultsTable">
-
-<thead>
-<tr>
-<th>Pos</th>
-<th>Tiempo</th>
-<th>Diferencia vs 1°</th>
-</tr>
-</thead>
-
-<tbody></tbody>
-
-</table>
-
-</div>
-
-<script src="script.js"></script>
-
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>Pos</th>
+                    <th>Tiempo</th>
+                    <th>Diferencia vs 1°</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
