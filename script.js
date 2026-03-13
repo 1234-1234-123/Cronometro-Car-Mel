@@ -24,27 +24,21 @@ function formatTime(ms) {
 }
 
 function captureTime() {
-
     const currentTime = Date.now() - startTime;
-
     times.push(currentTime);
-
+    
     const firstTime = times[0];
-
     const diff = currentTime - firstTime;
-
-    const row = `
-    <tr>
+    
+    const row = `<tr>
         <td>${times.length}</td>
         <td>${formatTime(currentTime)}</td>
         <td>${times.length === 1 ? '-' : '+' + (diff/1000).toFixed(2) + 's'}</td>
-    </tr>
-    `;
-
+    </tr>`;
+    
     tableBody.innerHTML += row;
 }
 
 startBtn.onclick = startTimer;
 captureBtn.onclick = captureTime;
-
 document.getElementById('resetBtn').onclick = () => location.reload();
